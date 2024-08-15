@@ -1,13 +1,12 @@
 import { TestBed } from '@angular/core/testing';
+import { wizarddata } from './wizarddata.service';
 
-import { WizarddataService } from './wizarddata.service';
-
-describe('WizarddataService', () => {
-  let service: WizarddataService;
+describe('wizarddata', () => {
+  let service: wizarddata;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(WizarddataService);
+    service = TestBed.inject(wizarddata);
   });
 
   it('should be created', () => {
