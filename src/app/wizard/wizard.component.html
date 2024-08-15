@@ -1,1 +1,6 @@
-<p>wizard works!</p>
+<div *ngIf="wizardData">
+    <h2>{{ wizardData.name }}</h2>
+    <img [src]="wizardData.image" alt="{{ wizardData.name }}" />
+    <p>{{ wizardData.description }}</p>
+  </div>
+  

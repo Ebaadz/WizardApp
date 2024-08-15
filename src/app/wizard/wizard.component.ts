@@ -1,12 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { wizarddata } from '../wizarddata.service';
 
 @Component({
   selector: 'app-wizard',
   standalone: true,
-  imports: [],
   templateUrl: './wizard.component.html',
-  styleUrl: './wizard.component.css'
+  styleUrls: ['./wizard.component.css']
 })
-export class WizardComponent {
+export class WizardComponent implements OnInit {
+  wizardData: any;
 
+  constructor(private wizarddata: wizarddata) {}
+
+  ngOnInit(): void {
+    this.wizarddata.getWizardData().subscribe(data => {
+      this.wizardData = data;
+
+    });
+  }
 }
